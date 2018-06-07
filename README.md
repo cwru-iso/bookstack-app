@@ -9,14 +9,16 @@ multiple instances.
 ## Usage
 Elastic BeanStalk will automatically run `composer install` when you deploy your application.
 
-1. Download the latest version of [BookStack](https://www.bookstackapp.com/):  
-`git clone https://github.com/BookStackApp/BookStack.git --branch release --single-branch`
-
-2. Clone this repo:  
+1. Clone the repo:  
 `git clone https://github.com/cwru-iso/bookstack-app.git`
 
-3. Zip the contents of the `bookstack-app` and `BookStack` source folder **together**:  
-`zip -r bookstack-app.zip ./bookstack-app/* ./BookStack/*`
+2. Run the build script within the repo:  
+`cd bookstack-app && ./build.sh`
+
+3. Upload the zip file to your Elastic Beanstalk application/environment.
+
+4. Configure your environment based on your requirements.  
+See: [BookStack hardware requirements](https://www.bookstackapp.com/#features).
 
 ## Environment
 Larvel can use global environment variables instead of the ones in `.env`, so it is
